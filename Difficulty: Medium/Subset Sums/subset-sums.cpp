@@ -4,34 +4,24 @@ using namespace std;
 
 
 // } Driver Code Ends
-
-
 class Solution {
   public:
-   void subsetSumsHelper(vector<int> &arr, int n, int index, int currentSum, vector<int> &allSums) {
-        if (index == n) {
-            allSums.push_back(currentSum);
-            return;
-        }
-        
-        // Include the current element in the subset
-        subsetSumsHelper(arr, n, index + 1, currentSum + arr[index], allSums);
-        
-        // Exclude the current element from the subset
-        subsetSumsHelper(arr, n, index + 1, currentSum, allSums);
-    }
-    
-    
-    
+  void f(int i, int sum, vector<int> &arr,int n, vector<int> &sumsubset){
+      if(i==n){
+          sumsubset.push_back(sum);
+          return;
+      }
+      f(i+1,sum+arr[i],arr,n,sumsubset);
+      f(i+1, sum,arr,n,sumsubset);
+  }
+  
+  public:
     vector<int> subsetSums(vector<int> arr, int n) {
-        vector<int> allSums;
-        subsetSumsHelper(arr, n, 0, 0, allSums);
-        sort(allSums.begin(), allSums.end());
-        return allSums;
-        
+        vector<int>sumsubset;
+        f(0,0,arr,n,sumsubset);
+        return sumsubset;
     }
 };
-
 
 //{ Driver Code Starts.
 int main() {
