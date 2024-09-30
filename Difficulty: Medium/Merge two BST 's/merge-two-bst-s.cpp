@@ -96,38 +96,28 @@ class Solution {
   public:
     // Function to return a list of integers denoting the node
     // values of both the BST in a sorted order.
-    void inorderTraversal(Node* root, vector<int>& result) {
-        if (root == NULL) return;
-        inorderTraversal(root->left, result);
-        result.push_back(root->data);
-        inorderTraversal(root->right, result);
-    }
+      void r(Node *root, vector<int>&v){
 
-    vector<int> mergeSortedLists(const vector<int>& list1, const vector<int>& list2) {
-        vector<int> mergedList;
-        int i = 0, j = 0;
-        while (i < list1.size() && j < list2.size()) {
-            if (list1[i] < list2[j]) {
-                mergedList.push_back(list1[i++]);
-            } else {
-                mergedList.push_back(list2[j++]);
-            }
-        }
-        while (i < list1.size()) {
-            mergedList.push_back(list1[i++]);
-        }
-        while (j < list2.size()) {
-            mergedList.push_back(list2[j++]);
-        }
-        return mergedList;
-    }
+      if(root==nullptr) return;
+
+      v.push_back(root->data);
+
+      r(root->left,v);
+
+      r(root->right,v);
+
+  }
     vector<int> merge(Node *root1, Node *root2) {
         // Your code here
-         vector<int> bst1, bst2;
-        inorderTraversal(root1, bst1);
-        inorderTraversal(root2, bst2);
-        return mergeSortedLists(bst1, bst2);
-        
+        vector<int>ans;
+
+        r(root1,ans);
+
+        r(root2,ans);
+
+        sort(ans.begin(),ans.end());
+
+        return ans;
     }
 };
 
