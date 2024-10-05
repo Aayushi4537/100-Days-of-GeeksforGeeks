@@ -9,4 +9,4 @@
 <strong>Explanation:</strong> 1 is the smallest positive number for which no subset is there with sum 1.
 </span></pre>
 <p><span style="font-size: 18px;"><strong>Expected Time Complexity:</strong> O(n)<br><strong>Expected Auxiliary Space:</strong>&nbsp;O(1)</span></p>
-<p><span style="font-size: 18px;"><strong>Constraints</strong><br>1 &lt;= arr.size()<strong>&nbsp;</strong>&lt;= 10<sup>6</sup><br>0 &lt;= arr[i] &lt;= 10<sup>8</sup></span><br>&nbsp;</p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Salesforce</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Arrays</code>&nbsp;<code>Data Structures</code>&nbsp;
+<p><span style="font-size: 18px;"><strong>Constraints</strong><br>1 &lt;= arr.size()<strong>&nbsp;</strong>&lt;= 10<sup>6</sup><br>1 &lt;= arr[i] &lt;= 10<sup>8</sup></span><br>&nbsp;</p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Salesforce</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Arrays</code>&nbsp;<code>Data Structures</code>&nbsp;
